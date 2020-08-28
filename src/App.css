@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 20vh;
+  background: white;
+  color: green;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 0;
+  padding: 0 20px; 
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 15px;
+  
+}
+header {
+  font-size: 7vh;
+  border: 0;
+  color: green;
+}
+.p1 {
+  align-items: left;
+}
+.u1 {
+  align-items: left;
+  list-style: none;
+
+}
+.li {
+  align-items: center;
+  list-style: none;
+}

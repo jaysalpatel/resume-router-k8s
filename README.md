@@ -1,0 +1,1 @@
+React Application displaying my resume wrapped in an docker image that is deploy on a kubernetes cluster served through Nginx
