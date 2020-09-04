@@ -23,4 +23,8 @@ Login in using the CLI
     argocd password
     argocd-server-asdkljasdkl
 
+
+ArgoCD will look for app.yaml file to apply/sync all kubernetes components
+
+    kubectl -n argocd apply -f app.yaml
     

@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/jaysalpatel/resume-router-k8s-jenkins.git
     targetRevision: HEAD
-    path: kubernetes/
+    path: argocd/react-app
     directory:
       recurse: true
   destination:
