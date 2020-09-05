@@ -6,6 +6,9 @@ to run docker image
 
 docker run -p 80:80 react-router
 
+Having multiple tags when building the image
+docker build -t jaysalpatel/react-router:latest -t jaysalpatel/react-router:v2
+
 
 set up kubernetes cluster use virtualbox as your VM for Mac OS X
 
