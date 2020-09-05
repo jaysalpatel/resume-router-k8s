@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: jaysalpatel/react-router
+        image: jaysalpatel/react-router:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
