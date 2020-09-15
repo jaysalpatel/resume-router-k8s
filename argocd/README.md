@@ -25,6 +25,7 @@ Login in using the CLI
 
 
 ArgoCD will look for app.yaml file to apply/sync all kubernetes components
+Once logged in on Argocd on localhost:8000
 
     kubectl -n argocd apply -f app.yaml
     
