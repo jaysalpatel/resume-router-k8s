@@ -5,7 +5,7 @@ to run docker image
 docker run -p 80:80 react-router
 
 Having multiple tags when building the image
-docker build -t jaysalpatel/react-router:latest -t jaysalpatel/react-router:v2
+docker build -t jaysalpatel/react-router:latest -t jaysalpatel/react-router
 
 
 set up kubernetes cluster use virtualbox as your VM for Mac OS X
@@ -16,6 +16,7 @@ Steps to install Argocd
 
 
 Create Argocd namespace
+
     kubectl create ns argocd
     kubectl -n argocd get pods
 
@@ -28,7 +29,7 @@ Create Argocd namespace
 
     kubectl port-forward svc/argocd-server -n argocd 8000:443
 
-    login with command from output for password and username is admin
+login with command from output for password and username is admin
 
     kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
 
