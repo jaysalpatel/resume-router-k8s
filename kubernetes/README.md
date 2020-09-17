@@ -1,13 +1,11 @@
-React Application displaying my resume wrapped in an docker image that is deploy on a kubernetes cluster served through ArgoCD
-
-
+Kubernetes yaml files
 
 to run docker image
 
 docker run -p 80:80 react-router
 
 Having multiple tags when building the image
-docker build -t jaysalpatel/react-router:latest -t jaysalpatel/react-router
+docker build -t jaysalpatel/react-router:latest -t jaysalpatel/react-router:v2
 
 
 set up kubernetes cluster use virtualbox as your VM for Mac OS X
@@ -30,7 +28,7 @@ Create Argocd namespace
 
     kubectl port-forward svc/argocd-server -n argocd 8000:443
 
-login with command from output for password and username is admin
+    login with command from output for password and username is admin
 
     kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
 
@@ -42,7 +40,7 @@ Expose the deployment to the internet
 
     kubectl expose deployment react-deploy --type="LoadBalancer"
 
-Using MetalLB in minikube environment since you will not get external IP
+Using MetalLB in minikube environment since you will not get external IP, these commands will create a metallb-system namespace 
 
     kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/namespace.yaml
     kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/metallb.yaml # On the first install only
@@ -56,7 +54,8 @@ Run minikube IP
 Output of minkube ip will be an address, pick an address pool similar to this for configmap.yaml
 Create configmap in metalLB namespace
 
-    kubectl -n metallb-system create -f configmap.yaml
+    
+    kubectl apply -f configmap.yaml
 
 Delete service and create it again
 
